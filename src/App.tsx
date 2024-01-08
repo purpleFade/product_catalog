@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Outlet } from 'react-router-dom';
+import './App.scss';
+import { Header } from './components/Header/Header';
+import './fonts/Mont-Regular.otf';
+import './fonts/Mont-Bold.otf';
+import './fonts/Mont-SemiBold.otf';
+import { Footer } from './components/Footer/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const App = () => (
+  <div className="App">
+    <Header />
 
-export default App;
+    <main className="main-content">
+      <div className="main-content__container">
+        <Outlet />
+      </div>
+    </main>
+
+    <Footer />
+  </div>
+);
