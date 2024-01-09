@@ -72,8 +72,9 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
-      object-position: center center;
+      object-position: center;
     }
+
   }
 
   &__position {
@@ -102,4 +103,12 @@
 
 .banner-active {
   background-color: $white;
+}
+
+.first-image {
+  object-position: center;
+
+  @include on-mobile {
+    object-position: right;
+  }
 }

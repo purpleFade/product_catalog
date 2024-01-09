@@ -5,11 +5,11 @@ import React, {
 } from 'react';
 import cn from 'classnames';
 import './Carousel.scss';
-import tablets from '../../assets/banner-iphone14.png';
+import newPhones from '../../assets/banner-iphone14.png';
 import phones from '../../assets/banner-phones.png';
 import accessories from '../../assets/banner-accessories.png';
 
-const images = [tablets, phones, accessories];
+const images = [newPhones, phones, accessories];
 
 export const Carousel: React.FC = () => {
   const firstImageIndex = 0;
@@ -68,12 +68,14 @@ export const Carousel: React.FC = () => {
               transform: `translateX(${-transformValue}px)`,
             }}
           >
-            {images.map((image) => (
+            {images.map((image, index) => (
               <li key={image} className="Carousel__slider-item">
                 <img
                   src={image}
                   alt="Banner"
-                  className="Carousel__slider-image"
+                  className={`Carousel__slider-image ${
+                    index === 0 ? 'first-image' : ''
+                  }`}
                 />
               </li>
             ))}
