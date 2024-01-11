@@ -20,7 +20,7 @@ export const SlideLeftButton: React.FC<Props> = ({
       })}
       onClick={onSlideLeft}
     >
-      <div className="icon icon--left" />
+      <div className="icon icon--left-bright" />
     </button>
   );
 };

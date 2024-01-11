@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import './Header.scss';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import {
   getIconNavClassName,
@@ -25,52 +25,58 @@ export const Header = () => {
 
   const cartProducts = useAppSelector((state) => state.cartProducts.items);
 
+  const cartQuantity = useMemo(() => {
+    return cartProducts.reduce((acc, cartItem) => {
+      return acc + cartItem.quantity;
+    }, 0);
+  }, [cartProducts]);
+  
   return (
-    <header className="Header" id="header">
-      <div className="Header__container-left">
+    <header className='Header' id='header'>
+      <div className='Header__container-left'>
         <button
-          type="button"
-          className="Header__burger"
+          type='button'
+          className='Header__burger'
           onClick={() => setIsMenuShown(true)}
         >
-          <span className="Header__burger-span Header__burger-span--one" />
-          <span className="Header__burger-span Header__burger-span--two" />
-          <span className="Header__burger-span Header__burger-span--three" />
+          <span className='Header__burger-span Header__burger-span--one' />
+          <span className='Header__burger-span Header__burger-span--two' />
+          <span className='Header__burger-span Header__burger-span--three' />
         </button>
 
-        <Link to="/" className="Header__logo">
-          <div className="Header__logo-image" />
+        <Link to='/' className='Header__logo'>
+          <div className='Header__logo-image' />
         </Link>
 
         <MobileMenu isMenuShown={isMenuShown} setIsMenuShown={setIsMenuShown} />
 
         {isCartOpen && (
           <nav
-            className="Header__navigation"
-            role="navigation"
-            aria-label="main navigation"
+            className='Header__navigation'
+            role='navigation'
+            aria-label='main navigation'
           >
-            <ul className="Header__navigation-list">
-              <li className="Header__navigation-item">
-                <NavLink className={getNavClassName} to="/">
+            <ul className='Header__navigation-list'>
+              <li className='Header__navigation-item'>
+                <NavLink className={getNavClassName} to='/'>
                   Home
                 </NavLink>
               </li>
 
               <li>
-                <NavLink className={getNavClassName} to="/phones">
+                <NavLink className={getNavClassName} to='/phones'>
                   Phones
                 </NavLink>
               </li>
 
               <li>
-                <NavLink className={getNavClassName} to="/tablets">
+                <NavLink className={getNavClassName} to='/tablets'>
                   Tablets
                 </NavLink>
               </li>
 
               <li>
-                <NavLink className={getNavClassName} to="/accessories">
+                <NavLink className={getNavClassName} to='/accessories'>
                   Accessories
                 </NavLink>
               </li>
@@ -79,15 +85,15 @@ export const Header = () => {
         )}
       </div>
 
-      <div className="Header__container-right">
+      <div className='Header__container-right'>
         {isSearchShown && <SearchField />}
 
         {isCartOpen && (
-          <NavLink to="/favourites" className={getIconNavClassName}>
-            <div className="Header__icon-link-image icon icon--favourites">
+          <NavLink to='/favourites' className={getIconNavClassName}>
+            <div className='Header__icon-link-image icon icon--favourites'>
               {!!favouriteProducts.length && (
-                <div className="Header__icon-link-fav">
-                  <span className="Header__icon-link-fav-amount">
+                <div className='Header__icon-link-fav'>
+                  <span className='Header__icon-link-fav-amount'>
                     {favouriteProducts.length}
                   </span>
                 </div>
@@ -96,12 +102,12 @@ export const Header = () => {
           </NavLink>
         )}
 
-        <NavLink to="/cart" className={getIconNavClassName}>
-          <div className="Header__icon-link-image icon icon--cart">
+        <NavLink to='/cart' className={getIconNavClassName}>
+          <div className='Header__icon-link-image icon icon--cart'>
             {!!cartProducts.length && (
-              <div className="Header__icon-link-fav">
-                <span className="Header__icon-link-fav-amount">
-                  {cartProducts.length}
+              <div className='Header__icon-link-fav'>
+                <span className='Header__icon-link-fav-amount'>
+                  {cartQuantity}
                 </span>
               </div>
             )}

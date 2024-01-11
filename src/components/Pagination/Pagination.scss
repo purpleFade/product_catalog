@@ -25,7 +25,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid $elements;
+      background-color: $surface1;
       transition-duration: $transition-duration;
 
       @extend %body;
@@ -36,11 +36,11 @@
       }
 
       &:hover {
-        border-color: $black;
+        background-color: $surface2;
       }
 
       &.active {
-        background-color: $black;
+        background-color: $accent;
         color: $white;
       }
     }

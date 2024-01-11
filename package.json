@@ -1,6 +1,6 @@
 {
+  "homepage": "https://purplefade.github.io/product_catalog",
   "name": "product_catalog",
-  "homepage": "https://purplefade.github.io/product_catalog/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +13,6 @@
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
     "classnames": "^2.5.1",
-    "gh-pages": "^6.1.1",
     "lodash.debounce": "^4.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -25,12 +24,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@types/lodash.debounce": "^4.0.9"
+    "@types/lodash.debounce": "^4.0.9",
+    "gh-pages": "^6.1.1"
   }
 }

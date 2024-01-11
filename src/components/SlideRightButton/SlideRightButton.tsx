@@ -21,7 +21,7 @@ export const SlideRightButton: React.FC<Props> = ({
       })}
       onClick={onSlideRight}
     >
-      <div className="icon icon--right" />
+      <div className="icon icon--right-bright" />
     </button>
   );
 };

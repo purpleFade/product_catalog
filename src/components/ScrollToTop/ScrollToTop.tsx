@@ -12,7 +12,7 @@ export const ScrollToTop = () => {
       <p className="ScrollToTop__message">Back to top</p>
 
       <div className="ScrollToTop__button">
-        <div className="icon icon--up" />
+        <div className="icon icon--up-bright" />
       </div>
     </button>
   );
