@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/product_catalog/static/css/main.7a23ff09.css",
-    "main.js": "/product_catalog/static/js/main.78b3bad8.js",
+    "main.css": "/product_catalog/static/css/main.c0826699.css",
+    "main.js": "/product_catalog/static/js/main.3969aedc.js",
     "static/media/banner-phones.png": "/product_catalog/static/media/banner-phones.b4eeda8bd82b712057a2.png",
     "static/media/main-logo.svg": "/product_catalog/static/media/main-logo.ebb4d8bdea1f32ee1e36.svg",
     "static/media/Mont-Regular.otf": "/product_catalog/static/media/Mont-Regular.1d26d89f7339866d3133.otf",
@@ -23,6 +23,7 @@
     "static/media/close.svg": "/product_catalog/static/media/close.c89cd55fcda471b596c2.svg",
     "static/media/burger-menu.svg": "/product_catalog/static/media/burger-menu.ccd1a9542b5bc584f2a1.svg",
     "static/media/plus.svg": "/product_catalog/static/media/plus.1377f8b445ceb66e847d.svg",
+    "static/media/arrow-up-bright.svg": "/product_catalog/static/media/arrow-up-bright.dd85ff6dbeca1f59cc70.svg",
     "static/media/arrow-left.svg": "/product_catalog/static/media/arrow-left.42403ae1a93c700f0b10.svg",
     "static/media/arrow-right-light.svg": "/product_catalog/static/media/arrow-right-light.e028d3889646e0b5e56c.svg",
     "static/media/arrow-right.svg": "/product_catalog/static/media/arrow-right.c9171b88f2b5c91378fd.svg",
@@ -32,11 +33,11 @@
     "static/media/minus.svg": "/product_catalog/static/media/minus.0365a13e7f5baa53bce8.svg",
     "static/media/burger-menu-hover.svg": "/product_catalog/static/media/burger-menu-hover.a0973de90b8a513fdb64.svg",
     "index.html": "/product_catalog/index.html",
-    "main.7a23ff09.css.map": "/product_catalog/static/css/main.7a23ff09.css.map",
-    "main.78b3bad8.js.map": "/product_catalog/static/js/main.78b3bad8.js.map"
+    "main.c0826699.css.map": "/product_catalog/static/css/main.c0826699.css.map",
+    "main.3969aedc.js.map": "/product_catalog/static/js/main.3969aedc.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a23ff09.css",
-    "static/js/main.78b3bad8.js"
+    "static/css/main.c0826699.css",
+    "static/js/main.3969aedc.js"
   ]
 }
